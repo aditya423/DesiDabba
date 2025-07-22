@@ -10,7 +10,7 @@ import UIKit
 class SplashVC: UIViewController {
 
     let logoImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "DesiDabbaLogo"))
+        let imageView = UIImageView(image: UIImage(named: ImageConstants.appLogo.rawValue))
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -18,7 +18,7 @@ class SplashVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 40/255, green: 95/255, blue: 93/255, alpha: 1)
+        view.backgroundColor = UIColor.background
         setupLayout()
         animateLogo()
     }

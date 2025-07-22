@@ -25,6 +25,15 @@
 		1894E4DA2E2FAD4A00447E58 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E4D92E2FAD4700447E58 /* MenuViewModel.swift */; };
 		1894E4DC2E2FAD6D00447E58 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E4DB2E2FAD6900447E58 /* CartViewModel.swift */; };
 		1894E4DE2E2FAD7F00447E58 /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E4DD2E2FAD7900447E58 /* CheckoutViewModel.swift */; };
+		1894E4E12E2FB0EF00447E58 /* SwiftLoader in Frameworks */ = {isa = PBXBuildFile; productRef = 1894E4E02E2FB0EF00447E58 /* SwiftLoader */; };
+		1894E4E32E2FB10500447E58 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E4E22E2FB10300447E58 /* Common.swift */; };
+		1894E5312E2FB5DE00447E58 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E5302E2FB5CD00447E58 /* UIViewController+Extension.swift */; };
+		1894E5772E30113F00447E58 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E5762E30113B00447E58 /* APIManager.swift */; };
+		1894E5792E30117600447E58 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E5782E30117200447E58 /* APIService.swift */; };
+		1894E5802E3013A000447E58 /* RestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E57E2E3013A000447E58 /* RestaurantService.swift */; };
+		1894E5822E3013EB00447E58 /* RestaurantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E5812E3013DA00447E58 /* RestaurantList.swift */; };
+		1894E5892E301F0800447E58 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894E5882E301F0800447E58 /* HomeTableViewCell.xib */; };
+		1894E58A2E301F0800447E58 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E5872E301F0800447E58 /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +57,14 @@
 		1894E4D92E2FAD4700447E58 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		1894E4DB2E2FAD6900447E58 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		1894E4DD2E2FAD7900447E58 /* CheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewModel.swift; sourceTree = "<group>"; };
+		1894E4E22E2FB10300447E58 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		1894E5302E2FB5CD00447E58 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		1894E5762E30113B00447E58 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		1894E5782E30117200447E58 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		1894E57E2E3013A000447E58 /* RestaurantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantService.swift; sourceTree = "<group>"; };
+		1894E5812E3013DA00447E58 /* RestaurantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantList.swift; sourceTree = "<group>"; };
+		1894E5872E301F0800447E58 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		1894E5882E301F0800447E58 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1894E4E12E2FB0EF00447E58 /* SwiftLoader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +98,7 @@
 		1894E4992E2FA56500447E58 /* DesiDabba */ = {
 			isa = PBXGroup;
 			children = (
+				1894E5752E30111400447E58 /* APIService */,
 				1894E4A32E2FA97300447E58 /* Application */,
 				1894E4A42E2FA9A600447E58 /* Modules */,
 				1894E4A52E2FAA2800447E58 /* Utilities */,
@@ -114,7 +133,9 @@
 		1894E4A52E2FAA2800447E58 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1894E4E22E2FB10300447E58 /* Common.swift */,
 				1894E4A62E2FAA4800447E58 /* Constants.swift */,
+				1894E5322E2FB60700447E58 /* Extensions */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -125,6 +146,7 @@
 				1894E4B22E2FAB5800447E58 /* Model */,
 				1894E4B12E2FAB5000447E58 /* View */,
 				1894E4B02E2FAB4600447E58 /* ViewModel */,
+				1894E57F2E3013A000447E58 /* WebService */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -140,6 +162,7 @@
 		1894E4B12E2FAB5000447E58 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1894E56E2E2FF34400447E58 /* Cells */,
 				1894E4AC2E2FAAFA00447E58 /* HomeViewController.swift */,
 				1894E4AD2E2FAAFA00447E58 /* HomeViewController.xib */,
 			);
@@ -149,6 +172,7 @@
 		1894E4B22E2FAB5800447E58 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1894E5812E3013DA00447E58 /* RestaurantList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,6 +279,40 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		1894E5322E2FB60700447E58 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1894E5302E2FB5CD00447E58 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1894E56E2E2FF34400447E58 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1894E5872E301F0800447E58 /* HomeTableViewCell.swift */,
+				1894E5882E301F0800447E58 /* HomeTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1894E5752E30111400447E58 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				1894E5782E30117200447E58 /* APIService.swift */,
+				1894E5762E30113B00447E58 /* APIManager.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		1894E57F2E3013A000447E58 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				1894E57E2E3013A000447E58 /* RestaurantService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,6 +330,7 @@
 			);
 			name = DesiDabba;
 			packageProductDependencies = (
+				1894E4E02E2FB0EF00447E58 /* SwiftLoader */,
 			);
 			productName = DesiDabba;
 			productReference = 1894E4782E2FA55800447E58 /* DesiDabba.app */;
@@ -301,6 +360,9 @@
 			);
 			mainGroup = 1894E46F2E2FA55800447E58;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1894E4DF2E2FB0EF00447E58 /* XCRemoteSwiftPackageReference "SwiftLoader" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1894E4792E2FA55800447E58 /* Products */;
 			projectDirPath = "";
@@ -317,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1894E4D52E2FACE300447E58 /* CheckoutViewController.xib in Resources */,
+				1894E5892E301F0800447E58 /* HomeTableViewCell.xib in Resources */,
 				1894E49A2E2FA56500447E58 /* Assets.xcassets in Resources */,
 				1894E4CD2E2FACB000447E58 /* MenuViewController.xib in Resources */,
 				1894E4D12E2FACC800447E58 /* CartViewController.xib in Resources */,
@@ -332,10 +395,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1894E5792E30117600447E58 /* APIService.swift in Sources */,
+				1894E5772E30113F00447E58 /* APIManager.swift in Sources */,
 				1894E4DE2E2FAD7F00447E58 /* CheckoutViewModel.swift in Sources */,
 				1894E49E2E2FA56500447E58 /* AppDelegate.swift in Sources */,
+				1894E5802E3013A000447E58 /* RestaurantService.swift in Sources */,
+				1894E5312E2FB5DE00447E58 /* UIViewController+Extension.swift in Sources */,
+				1894E58A2E301F0800447E58 /* HomeTableViewCell.swift in Sources */,
+				1894E4E32E2FB10500447E58 /* Common.swift in Sources */,
 				1894E4AF2E2FAAFA00447E58 /* HomeViewController.swift in Sources */,
 				1894E4D62E2FACE300447E58 /* CheckoutViewController.swift in Sources */,
+				1894E5822E3013EB00447E58 /* RestaurantList.swift in Sources */,
 				1894E4D82E2FAD0700447E58 /* HomeViewModel.swift in Sources */,
 				1894E4DC2E2FAD6D00447E58 /* CartViewModel.swift in Sources */,
 				1894E4D22E2FACC800447E58 /* CartViewController.swift in Sources */,
@@ -371,11 +441,14 @@
 				DEVELOPMENT_TEAM = Z37X84PRTQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DesiDabba/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Desi Dabba";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,9 +456,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Aditya.DesiDabba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -399,11 +476,14 @@
 				DEVELOPMENT_TEAM = Z37X84PRTQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DesiDabba/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Desi Dabba";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,9 +491,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Aditya.DesiDabba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -560,6 +644,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1894E4DF2E2FB0EF00447E58 /* XCRemoteSwiftPackageReference "SwiftLoader" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/leoru/SwiftLoader";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1894E4E02E2FB0EF00447E58 /* SwiftLoader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1894E4DF2E2FB0EF00447E58 /* XCRemoteSwiftPackageReference "SwiftLoader" */;
+			productName = SwiftLoader;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1894E4702E2FA55800447E58 /* Project object */;
 }

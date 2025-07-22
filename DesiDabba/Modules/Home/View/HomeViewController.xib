@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="DesiDabba" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="eDu-jb-0M9" id="uqj-zL-6ab"/>
+                <outlet property="searchView" destination="Y5A-kR-kGg" id="JcB-e2-4cF"/>
+                <outlet property="tblView" destination="zyM-XS-mRj" id="Mt7-Tg-a23"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,12 +21,102 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaV-zb-ZfK">
+                    <rect key="frame" x="0.0" y="118" width="393" height="734"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxD-o7-JUG">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTt-Jf-rTj">
+                                    <rect key="frame" x="139.33333333333334" y="0.0" width="114.33333333333334" height="50"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15n-6O-Psz">
+                                    <rect key="frame" x="343" y="0.0" width="50" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="15n-6O-Psz" secondAttribute="height" multiplier="1:1" id="A1M-rm-wCd"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                                    <connections>
+                                        <action selector="searchBtnAction:" destination="-1" eventType="touchUpInside" id="TRL-mv-Kby"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="backgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="FTt-Jf-rTj" secondAttribute="bottom" id="71K-xD-Lta"/>
+                                <constraint firstItem="FTt-Jf-rTj" firstAttribute="top" secondItem="rxD-o7-JUG" secondAttribute="top" id="CFf-c1-ypU"/>
+                                <constraint firstAttribute="height" constant="50" id="Nqh-hi-mcm"/>
+                                <constraint firstItem="FTt-Jf-rTj" firstAttribute="centerX" secondItem="rxD-o7-JUG" secondAttribute="centerX" id="S5L-VD-fQ5"/>
+                                <constraint firstAttribute="trailing" secondItem="15n-6O-Psz" secondAttribute="trailing" id="X17-OC-h2m"/>
+                                <constraint firstItem="15n-6O-Psz" firstAttribute="top" secondItem="rxD-o7-JUG" secondAttribute="top" id="Yn1-vn-4uX"/>
+                                <constraint firstAttribute="bottom" secondItem="15n-6O-Psz" secondAttribute="bottom" id="fyF-Em-aAh"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fqI-dM-q9d">
+                            <rect key="frame" x="0.0" y="50" width="393" height="684"/>
+                            <subviews>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5A-kR-kGg">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" placeholder="Search Restaurants" translatesAutoresizingMaskIntoConstraints="NO" id="eDu-jb-0M9">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="HEG-a2-n7g"/>
+                                            </connections>
+                                        </searchBar>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="eDu-jb-0M9" secondAttribute="bottom" id="2JS-nn-MNy"/>
+                                        <constraint firstAttribute="trailing" secondItem="eDu-jb-0M9" secondAttribute="trailing" id="3kC-8R-54P"/>
+                                        <constraint firstItem="eDu-jb-0M9" firstAttribute="leading" secondItem="Y5A-kR-kGg" secondAttribute="leading" id="QAM-hu-VYT"/>
+                                        <constraint firstAttribute="height" constant="50" id="ot5-Iv-QH3"/>
+                                        <constraint firstItem="eDu-jb-0M9" firstAttribute="top" secondItem="Y5A-kR-kGg" secondAttribute="top" id="pHd-a6-rEc"/>
+                                    </constraints>
+                                </view>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zyM-XS-mRj">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="684"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </tableView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="rxD-o7-JUG" firstAttribute="leading" secondItem="eaV-zb-ZfK" secondAttribute="leading" id="AiQ-9M-sze"/>
+                        <constraint firstItem="fqI-dM-q9d" firstAttribute="top" secondItem="rxD-o7-JUG" secondAttribute="bottom" id="K8X-6o-f0O"/>
+                        <constraint firstAttribute="bottom" secondItem="fqI-dM-q9d" secondAttribute="bottom" id="M3k-rG-RsV"/>
+                        <constraint firstAttribute="trailing" secondItem="fqI-dM-q9d" secondAttribute="trailing" id="RwG-40-m5s"/>
+                        <constraint firstItem="rxD-o7-JUG" firstAttribute="top" secondItem="eaV-zb-ZfK" secondAttribute="top" id="T3h-m3-78K"/>
+                        <constraint firstAttribute="trailing" secondItem="rxD-o7-JUG" secondAttribute="trailing" id="WkC-4I-yr9"/>
+                        <constraint firstItem="fqI-dM-q9d" firstAttribute="leading" secondItem="eaV-zb-ZfK" secondAttribute="leading" id="XUk-OZ-Cv6"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="backgroundColor"/>
+            <constraints>
+                <constraint firstItem="eaV-zb-ZfK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6Q0-xY-y1W"/>
+                <constraint firstItem="eaV-zb-ZfK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7CQ-Qw-yQy"/>
+                <constraint firstAttribute="bottom" secondItem="eaV-zb-ZfK" secondAttribute="bottom" id="Ura-AH-Q3z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eaV-zb-ZfK" secondAttribute="trailing" id="gH4-Q6-gEc"/>
+            </constraints>
             <point key="canvasLocation" x="62" y="20"/>
         </view>
     </objects>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <namedColor name="backgroundColor">
+            <color red="0.69019607843137254" green="0.41568627450980394" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
