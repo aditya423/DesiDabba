@@ -39,6 +39,10 @@
 		1894E6352E31593800447E58 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E6332E31593800447E58 /* MenuTableViewCell.swift */; };
 		1894E6362E31593800447E58 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894E6342E31593800447E58 /* MenuTableViewCell.xib */; };
 		1894E6392E315B9200447E58 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1894E6382E315B9200447E58 /* Kingfisher */; };
+		1894E6772E316C9400447E58 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1894E6762E316C9400447E58 /* CoreData.framework */; };
+		1894E67A2E316CC600447E58 /* DesiDabbaModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1894E6782E316CC500447E58 /* DesiDabbaModel.xcdatamodeld */; };
+		1894E67C2E316D8F00447E58 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E67B2E316D8900447E58 /* CoreDataManager.swift */; };
+		1894E6802E31722C00447E58 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E67F2E31722800447E58 /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +78,10 @@
 		1894E5F52E31434A00447E58 /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
 		1894E6332E31593800447E58 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		1894E6342E31593800447E58 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		1894E6762E316C9400447E58 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1894E6792E316CC500447E58 /* DesiDabbaModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DesiDabbaModel.xcdatamodel; sourceTree = "<group>"; };
+		1894E67B2E316D8900447E58 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		1894E67F2E31722800447E58 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1894E6392E315B9200447E58 /* Kingfisher in Frameworks */,
+				1894E6772E316C9400447E58 /* CoreData.framework in Frameworks */,
 				1894E4E12E2FB0EF00447E58 /* SwiftLoader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,7 +101,10 @@
 		1894E46F2E2FA55800447E58 = {
 			isa = PBXGroup;
 			children = (
+				1894E67B2E316D8900447E58 /* CoreDataManager.swift */,
+				1894E6782E316CC500447E58 /* DesiDabbaModel.xcdatamodeld */,
 				1894E4992E2FA56500447E58 /* DesiDabba */,
+				1894E6752E316C9300447E58 /* Frameworks */,
 				1894E4792E2FA55800447E58 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,6 +155,7 @@
 		1894E4A52E2FAA2800447E58 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1894E67F2E31722800447E58 /* Protocols.swift */,
 				1894E4E22E2FB10300447E58 /* Common.swift */,
 				1894E4A62E2FAA4800447E58 /* Constants.swift */,
 				1894E5322E2FB60700447E58 /* Extensions */,
@@ -343,6 +356,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		1894E6752E316C9300447E58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1894E6762E316C9400447E58 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -433,7 +454,9 @@
 				1894E4DE2E2FAD7F00447E58 /* CheckoutViewModel.swift in Sources */,
 				1894E49E2E2FA56500447E58 /* AppDelegate.swift in Sources */,
 				1894E5802E3013A000447E58 /* RestaurantService.swift in Sources */,
+				1894E6802E31722C00447E58 /* Protocols.swift in Sources */,
 				1894E5F62E31435200447E58 /* MenuService.swift in Sources */,
+				1894E67C2E316D8F00447E58 /* CoreDataManager.swift in Sources */,
 				1894E5312E2FB5DE00447E58 /* UIViewController+Extension.swift in Sources */,
 				1894E58A2E301F0800447E58 /* HomeTableViewCell.swift in Sources */,
 				1894E4E32E2FB10500447E58 /* Common.swift in Sources */,
@@ -442,6 +465,7 @@
 				1894E4D62E2FACE300447E58 /* CheckoutViewController.swift in Sources */,
 				1894E5822E3013EB00447E58 /* RestaurantList.swift in Sources */,
 				1894E4D82E2FAD0700447E58 /* HomeViewModel.swift in Sources */,
+				1894E67A2E316CC600447E58 /* DesiDabbaModel.xcdatamodeld in Sources */,
 				1894E4DC2E2FAD6D00447E58 /* CartViewModel.swift in Sources */,
 				1894E4D22E2FACC800447E58 /* CartViewController.swift in Sources */,
 				1894E49F2E2FA56500447E58 /* SceneDelegate.swift in Sources */,
@@ -712,6 +736,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		1894E6782E316CC500447E58 /* DesiDabbaModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1894E6792E316CC500447E58 /* DesiDabbaModel.xcdatamodel */,
+			);
+			currentVersion = 1894E6792E316CC500447E58 /* DesiDabbaModel.xcdatamodel */;
+			path = DesiDabbaModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1894E4702E2FA55800447E58 /* Project object */;
 }

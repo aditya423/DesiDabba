@@ -54,6 +54,9 @@
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="cart" catalog="system"/>
+                                    <connections>
+                                        <action selector="cartBtnAction:" destination="-1" eventType="touchUpInside" id="AEJ-9U-9Xh"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <viewLayoutGuide key="safeArea" id="Fxy-6g-4ux"/>

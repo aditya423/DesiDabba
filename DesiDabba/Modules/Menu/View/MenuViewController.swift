@@ -48,6 +48,18 @@ class MenuViewController: UIViewController {
     @IBAction func backBtnAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func cartBtnAction(_ sender: UIButton) {
+        let vc = CartViewController.loadNib()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+// MARK: MenuTableViewCellProtocol Delegate Methods
+extension MenuViewController: MenuTableViewCellProtocol {
+    func showMessage(msg: String, desc: String) {
+        self.showAlert(title: msg, message: desc)
+    }
 }
 
 // MARK: TableView Delegate & Datasource Methods
@@ -59,6 +71,8 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FileNames.menuTableViewCell.rawValue, for: indexPath) as! MenuTableViewCell
         cell.setupCell(item: viewModel.menuList[indexPath.row])
+        cell.delegate = self
+        cell.selectionStyle = .none
         return cell
     }
 }
