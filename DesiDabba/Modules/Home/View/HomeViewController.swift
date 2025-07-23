@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tblView: UITableView!
+    var filteredRestaurants: [Restaurant] = []
+    var isSearching: Bool = false
     let viewModel = HomeViewModel()
     
     // MARK: LIFECYCLE
@@ -22,7 +24,11 @@ class HomeViewController: UIViewController {
         setupSearchBar()
         setupTableView()
         getRestaurantsList()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     // MARK: METHODS
@@ -59,6 +65,19 @@ class HomeViewController: UIViewController {
 
 // MARK: SearchBar Delegate Methods
 extension HomeViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            isSearching = false
+            filteredRestaurants.removeAll()
+        } else {
+            isSearching = true
+            filteredRestaurants = viewModel.restaurants.filter {
+                $0.restaurantName?.lowercased().contains(searchText.lowercased()) ?? false
+            }
+        }
+        tblView.reloadData()
+    }
+
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
@@ -67,13 +86,19 @@ extension HomeViewController: UISearchBarDelegate {
 // MARK: TableView Delegate & Datasource Methods
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.restaurants.count
+        return isSearching ? filteredRestaurants.count : viewModel.restaurants.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FileNames.homeTableViewCell.rawValue, for: indexPath) as! HomeTableViewCell
-        cell.setupCell(data: viewModel.restaurants[indexPath.row])
+        cell.setupCell(data: isSearching ? filteredRestaurants[indexPath.row] : viewModel.restaurants[indexPath.row])
         cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = MenuViewController.loadNib()
+        restaurantId = (isSearching ? filteredRestaurants[indexPath.row].restaurantID : viewModel.restaurants[indexPath.row].restaurantID) ?? 0
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

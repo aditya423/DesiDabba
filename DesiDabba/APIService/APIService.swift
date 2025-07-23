@@ -11,6 +11,7 @@ let BaseURL = "https://fakerestaurantapi.runasp.net"
 
 enum APIServices {
     case getRestaurants
+    case getRestaurantMenu
 }
 
 extension APIServices {
@@ -19,13 +20,14 @@ extension APIServices {
         var servicePath: String = ""
         switch self {
         case .getRestaurants: servicePath = apiDomain + "Restaurant"
+        case .getRestaurantMenu: servicePath = apiDomain + "Restaurant/\(restaurantId)/menu"
         }
         return BaseURL + servicePath
     }
     
     var httpMethod: String {
         switch self {
-        case .getRestaurants:
+        case .getRestaurants, .getRestaurantMenu:
             return "GET"
         }
     }

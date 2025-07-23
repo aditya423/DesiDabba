@@ -7,6 +7,7 @@
 
 enum FileNames: String {
     case homeTableViewCell = "HomeTableViewCell"
+    case menuViewController = "MenuViewController"
 }
 
 enum ImageConstants: String {

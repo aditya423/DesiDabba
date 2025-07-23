@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 import SwiftLoader
 
+var restaurantId = 0
+
 // MARK: LOADER
 func showLoader() {
     let parentView = UIView(frame: UIScreen.main.bounds)

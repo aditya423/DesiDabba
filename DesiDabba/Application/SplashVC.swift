@@ -49,9 +49,10 @@ class SplashVC: UIViewController {
         }, completion: { _ in
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 let homeVC = HomeViewController()
-                homeVC.modalTransitionStyle = .crossDissolve
-                homeVC.modalPresentationStyle = .fullScreen
-                self.present(homeVC, animated: true, completion: nil)
+                let navVC = UINavigationController(rootViewController: homeVC)
+                navVC.modalTransitionStyle = .crossDissolve
+                navVC.modalPresentationStyle = .fullScreen
+                self.present(navVC, animated: true, completion: nil)
             }
         })
     }
