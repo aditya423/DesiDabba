@@ -8,12 +8,14 @@
 enum FileNames: String {
     case homeTableViewCell = "HomeTableViewCell"
     case menuViewController = "MenuViewController"
+    case menuTableViewCell = "MenuTableViewCell"
 }
 
 enum ImageConstants: String {
     case appLogo = "DesiDabbaLogo"
     case starFill = "star_check"
     case starEmpty = "star.fill"
+    case restaurantTemp = "restaurantImage"
 }
 
 enum AlertMessages: String {

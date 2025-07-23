@@ -46,16 +46,28 @@
                                         <action selector="backBtnAction:" destination="-1" eventType="touchUpInside" id="b64-UX-W5Y"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWJ-gZ-cOy">
+                                    <rect key="frame" x="343" y="0.0" width="50" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="fWJ-gZ-cOy" secondAttribute="height" multiplier="1:1" id="b0r-1G-RiN"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="cart" catalog="system"/>
+                                </button>
                             </subviews>
                             <viewLayoutGuide key="safeArea" id="Fxy-6g-4ux"/>
                             <color key="backgroundColor" name="backgroundColor"/>
                             <constraints>
                                 <constraint firstItem="sel-Ss-S49" firstAttribute="leading" secondItem="Fxy-6g-4ux" secondAttribute="leading" id="1Vs-1c-yua"/>
                                 <constraint firstAttribute="height" constant="50" id="9hU-sx-FF2"/>
+                                <constraint firstItem="Fxy-6g-4ux" firstAttribute="bottom" secondItem="fWJ-gZ-cOy" secondAttribute="bottom" id="D9a-Eg-9Gi"/>
+                                <constraint firstItem="fWJ-gZ-cOy" firstAttribute="top" secondItem="Fxy-6g-4ux" secondAttribute="top" id="LsD-gw-D3l"/>
                                 <constraint firstItem="Fxy-6g-4ux" firstAttribute="bottom" secondItem="sel-Ss-S49" secondAttribute="bottom" id="N54-Iw-dRu"/>
                                 <constraint firstItem="sel-Ss-S49" firstAttribute="top" secondItem="Fxy-6g-4ux" secondAttribute="top" id="Oml-qH-bfD"/>
                                 <constraint firstItem="W5c-Ad-73E" firstAttribute="bottom" secondItem="Fxy-6g-4ux" secondAttribute="bottom" id="T3W-wN-6nf"/>
                                 <constraint firstItem="W5c-Ad-73E" firstAttribute="top" secondItem="Fxy-6g-4ux" secondAttribute="top" id="aR1-0c-Nmd"/>
+                                <constraint firstItem="Fxy-6g-4ux" firstAttribute="trailing" secondItem="fWJ-gZ-cOy" secondAttribute="trailing" id="f3Z-Qd-l9E"/>
                                 <constraint firstItem="W5c-Ad-73E" firstAttribute="centerX" secondItem="3BO-Yu-h2W" secondAttribute="centerX" id="pTM-EF-Ofa"/>
                             </constraints>
                         </view>
@@ -88,6 +100,7 @@
         </view>
     </objects>
     <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <namedColor name="backgroundColor">
             <color red="0.68999999761581421" green="0.41600000858306885" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

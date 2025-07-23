@@ -19,6 +19,8 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
         menuTblView.delegate = self
         menuTblView.dataSource = self
+        menuTblView.register(UINib(nibName: FileNames.menuTableViewCell.rawValue, bundle: nil),
+                             forCellReuseIdentifier: FileNames.menuTableViewCell.rawValue)
         getMenu()
     }
     
@@ -55,6 +57,8 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: FileNames.menuTableViewCell.rawValue, for: indexPath) as! MenuTableViewCell
+        cell.setupCell(item: viewModel.menuList[indexPath.row])
+        return cell
     }
 }

@@ -36,6 +36,9 @@
 		1894E58A2E301F0800447E58 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E5872E301F0800447E58 /* HomeTableViewCell.swift */; };
 		1894E5F32E31413200447E58 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E5F22E31412E00447E58 /* MenuList.swift */; };
 		1894E5F62E31435200447E58 /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E5F52E31434A00447E58 /* MenuService.swift */; };
+		1894E6352E31593800447E58 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E6332E31593800447E58 /* MenuTableViewCell.swift */; };
+		1894E6362E31593800447E58 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894E6342E31593800447E58 /* MenuTableViewCell.xib */; };
+		1894E6392E315B9200447E58 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1894E6382E315B9200447E58 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,8 @@
 		1894E5882E301F0800447E58 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		1894E5F22E31412E00447E58 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		1894E5F52E31434A00447E58 /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
+		1894E6332E31593800447E58 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		1894E6342E31593800447E58 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1894E6392E315B9200447E58 /* Kingfisher in Frameworks */,
 				1894E4E12E2FB0EF00447E58 /* SwiftLoader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +209,7 @@
 		1894E4B72E2FAC3600447E58 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1894E6322E31592500447E58 /* Cells */,
 				1894E4CB2E2FACB000447E58 /* MenuViewController.swift */,
 				1894E4CC2E2FACB000447E58 /* MenuViewController.xib */,
 			);
@@ -327,6 +334,15 @@
 			path = WebService;
 			sourceTree = "<group>";
 		};
+		1894E6322E31592500447E58 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1894E6332E31593800447E58 /* MenuTableViewCell.swift */,
+				1894E6342E31593800447E58 /* MenuTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -345,6 +361,7 @@
 			name = DesiDabba;
 			packageProductDependencies = (
 				1894E4E02E2FB0EF00447E58 /* SwiftLoader */,
+				1894E6382E315B9200447E58 /* Kingfisher */,
 			);
 			productName = DesiDabba;
 			productReference = 1894E4782E2FA55800447E58 /* DesiDabba.app */;
@@ -376,6 +393,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				1894E4DF2E2FB0EF00447E58 /* XCRemoteSwiftPackageReference "SwiftLoader" */,
+				1894E6372E315B9200447E58 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1894E4792E2FA55800447E58 /* Products */;
@@ -398,6 +416,7 @@
 				1894E4CD2E2FACB000447E58 /* MenuViewController.xib in Resources */,
 				1894E4D12E2FACC800447E58 /* CartViewController.xib in Resources */,
 				1894E4AE2E2FAAFA00447E58 /* HomeViewController.xib in Resources */,
+				1894E6362E31593800447E58 /* MenuTableViewCell.xib in Resources */,
 				1894E49C2E2FA56500447E58 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +438,7 @@
 				1894E58A2E301F0800447E58 /* HomeTableViewCell.swift in Sources */,
 				1894E4E32E2FB10500447E58 /* Common.swift in Sources */,
 				1894E4AF2E2FAAFA00447E58 /* HomeViewController.swift in Sources */,
+				1894E6352E31593800447E58 /* MenuTableViewCell.swift in Sources */,
 				1894E4D62E2FACE300447E58 /* CheckoutViewController.swift in Sources */,
 				1894E5822E3013EB00447E58 /* RestaurantList.swift in Sources */,
 				1894E4D82E2FAD0700447E58 /* HomeViewModel.swift in Sources */,
@@ -670,6 +690,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		1894E6372E315B9200447E58 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -677,6 +705,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1894E4DF2E2FB0EF00447E58 /* XCRemoteSwiftPackageReference "SwiftLoader" */;
 			productName = SwiftLoader;
+		};
+		1894E6382E315B9200447E58 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1894E6372E315B9200447E58 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
