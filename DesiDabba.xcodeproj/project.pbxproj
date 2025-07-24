@@ -42,6 +42,7 @@
 		1894E67A2E316CC600447E58 /* DesiDabbaModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1894E6782E316CC500447E58 /* DesiDabbaModel.xcdatamodeld */; };
 		1894E67C2E316D8F00447E58 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E67B2E316D8900447E58 /* CoreDataManager.swift */; };
 		1894E6802E31722C00447E58 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E67F2E31722800447E58 /* Protocols.swift */; };
+		18E87B612E32C0A5005A4B9D /* OrderSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E87B602E32C0A5005A4B9D /* OrderSuccessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		1894E6792E316CC500447E58 /* DesiDabbaModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DesiDabbaModel.xcdatamodel; sourceTree = "<group>"; };
 		1894E67B2E316D8900447E58 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		1894E67F2E31722800447E58 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		18E87B602E32C0A5005A4B9D /* OrderSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSuccessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 			children = (
 				1894E4D32E2FACE300447E58 /* CheckoutViewController.swift */,
 				1894E4D42E2FACE300447E58 /* CheckoutViewController.xib */,
+				18E87B602E32C0A5005A4B9D /* OrderSuccessView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				1894E58A2E301F0800447E58 /* HomeTableViewCell.swift in Sources */,
 				1894E4E32E2FB10500447E58 /* Common.swift in Sources */,
 				1894E4AF2E2FAAFA00447E58 /* HomeViewController.swift in Sources */,
+				18E87B612E32C0A5005A4B9D /* OrderSuccessView.swift in Sources */,
 				1894E6352E31593800447E58 /* MenuTableViewCell.swift in Sources */,
 				1894E4D62E2FACE300447E58 /* CheckoutViewController.swift in Sources */,
 				1894E5822E3013EB00447E58 /* RestaurantList.swift in Sources */,
