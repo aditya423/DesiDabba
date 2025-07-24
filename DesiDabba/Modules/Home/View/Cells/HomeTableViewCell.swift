@@ -15,11 +15,13 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var restaurantType: UILabel!
     
+    // MARK: LIFECYCLE
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
     
+    // MARK: METHODS
     private func setupUI() {
         restaurantImg.layer.cornerRadius = 10
         parentView.layer.cornerRadius = 10

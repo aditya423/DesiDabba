@@ -44,7 +44,10 @@ class MenuViewController: UIViewController {
             }
         }
     }
-    
+}
+
+// MARK: IBACTION METHODS
+extension MenuViewController {
     @IBAction func backBtnAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -60,6 +63,10 @@ extension MenuViewController: MenuTableViewCellProtocol {
     func showMessage(msg: String, desc: String) {
         self.showAlert(title: msg, message: desc)
     }
+    
+    func updateElement(itemId: Int) {}
+    
+    func deleteElement(itemId: Int) {}
 }
 
 // MARK: TableView Delegate & Datasource Methods

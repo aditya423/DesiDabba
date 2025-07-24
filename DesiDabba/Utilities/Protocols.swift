@@ -7,4 +7,6 @@
 
 protocol MenuTableViewCellProtocol: AnyObject {
     func showMessage(msg: String, desc: String)
+    func deleteElement(itemId: Int)
+    func updateElement(itemId: Int)
 }

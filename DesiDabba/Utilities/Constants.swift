@@ -10,6 +10,7 @@ enum FileNames: String {
     case menuViewController = "MenuViewController"
     case menuTableViewCell = "MenuTableViewCell"
     case cartViewController = "CartViewController"
+    case checkoutViewController = "CheckoutViewController"
 }
 
 enum ImageConstants: String {
@@ -17,16 +18,16 @@ enum ImageConstants: String {
     case starFill = "star_check"
     case starEmpty = "star.fill"
     case restaurantTemp = "restaurantImage"
+    case placeholder = "placeholder"
 }
 
 enum AlertMessages: String {
-    case error = "Error"
-    case somethingWentWrong = "Something went wrong"
-}
-
-enum StringConstants: String {
     case success = "Success!"
     case oops = "Oops!"
+    case error = "Error!"
+    case sorry = "Sorry!"
+    case somethingWentWrong = "Something went wrong."
     case successMsg = "Dish added to cart successfully."
     case oopsMsg = "Dish is already present in the cart."
+    case sorryMsg = "No dishes in the cart for checkout."
 }

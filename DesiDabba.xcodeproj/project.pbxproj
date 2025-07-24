@@ -23,7 +23,6 @@
 		1894E4D62E2FACE300447E58 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E4D32E2FACE300447E58 /* CheckoutViewController.swift */; };
 		1894E4D82E2FAD0700447E58 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E4D72E2FAD0000447E58 /* HomeViewModel.swift */; };
 		1894E4DA2E2FAD4A00447E58 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E4D92E2FAD4700447E58 /* MenuViewModel.swift */; };
-		1894E4DC2E2FAD6D00447E58 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E4DB2E2FAD6900447E58 /* CartViewModel.swift */; };
 		1894E4DE2E2FAD7F00447E58 /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E4DD2E2FAD7900447E58 /* CheckoutViewModel.swift */; };
 		1894E4E12E2FB0EF00447E58 /* SwiftLoader in Frameworks */ = {isa = PBXBuildFile; productRef = 1894E4E02E2FB0EF00447E58 /* SwiftLoader */; };
 		1894E4E32E2FB10500447E58 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894E4E22E2FB10300447E58 /* Common.swift */; };
@@ -64,7 +63,6 @@
 		1894E4D42E2FACE300447E58 /* CheckoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutViewController.xib; sourceTree = "<group>"; };
 		1894E4D72E2FAD0000447E58 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1894E4D92E2FAD4700447E58 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
-		1894E4DB2E2FAD6900447E58 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		1894E4DD2E2FAD7900447E58 /* CheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewModel.swift; sourceTree = "<group>"; };
 		1894E4E22E2FB10300447E58 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		1894E5302E2FB5CD00447E58 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -101,8 +99,6 @@
 		1894E46F2E2FA55800447E58 = {
 			isa = PBXGroup;
 			children = (
-				1894E67B2E316D8900447E58 /* CoreDataManager.swift */,
-				1894E6782E316CC500447E58 /* DesiDabbaModel.xcdatamodeld */,
 				1894E4992E2FA56500447E58 /* DesiDabba */,
 				1894E6752E316C9300447E58 /* Frameworks */,
 				1894E4792E2FA55800447E58 /* Products */,
@@ -122,6 +118,7 @@
 			children = (
 				1894E4A32E2FA97300447E58 /* Application */,
 				1894E5752E30111400447E58 /* APIService */,
+				18E87B5F2E328085005A4B9D /* DatabaseService */,
 				1894E4A42E2FA9A600447E58 /* Modules */,
 				1894E4A52E2FAA2800447E58 /* Utilities */,
 				1894E4912E2FA56500447E58 /* Assets.xcassets */,
@@ -240,18 +237,9 @@
 		1894E4BB2E2FAC5000447E58 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
-				1894E4BC2E2FAC5500447E58 /* Model */,
 				1894E4BF2E2FAC5500447E58 /* View */,
-				1894E4C02E2FAC5500447E58 /* ViewModel */,
 			);
 			path = Cart;
-			sourceTree = "<group>";
-		};
-		1894E4BC2E2FAC5500447E58 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		1894E4BF2E2FAC5500447E58 /* View */ = {
@@ -261,14 +249,6 @@
 				1894E4D02E2FACC800447E58 /* CartViewController.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		1894E4C02E2FAC5500447E58 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				1894E4DB2E2FAD6900447E58 /* CartViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		1894E4C32E2FAC5E00447E58 /* Checkout */ = {
@@ -362,6 +342,15 @@
 				1894E6762E316C9400447E58 /* CoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18E87B5F2E328085005A4B9D /* DatabaseService */ = {
+			isa = PBXGroup;
+			children = (
+				1894E67B2E316D8900447E58 /* CoreDataManager.swift */,
+				1894E6782E316CC500447E58 /* DesiDabbaModel.xcdatamodeld */,
+			);
+			path = DatabaseService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,7 +455,6 @@
 				1894E5822E3013EB00447E58 /* RestaurantList.swift in Sources */,
 				1894E4D82E2FAD0700447E58 /* HomeViewModel.swift in Sources */,
 				1894E67A2E316CC600447E58 /* DesiDabbaModel.xcdatamodeld in Sources */,
-				1894E4DC2E2FAD6D00447E58 /* CartViewModel.swift in Sources */,
 				1894E4D22E2FACC800447E58 /* CartViewController.swift in Sources */,
 				1894E49F2E2FA56500447E58 /* SceneDelegate.swift in Sources */,
 				1894E4A22E2FA7AD00447E58 /* SplashVC.swift in Sources */,

@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
     
     // MARK: METHODS
     private func setupSearchBar() {
-        searchBar.returnKeyType = .default
+        searchBar.returnKeyType = .done
         searchBar.delegate = self
     }
     
@@ -42,10 +42,6 @@ class HomeViewController: UIViewController {
         tblView.dataSource = self
         tblView.register(UINib(nibName: FileNames.homeTableViewCell.rawValue, bundle: nil),
                          forCellReuseIdentifier: FileNames.homeTableViewCell.rawValue)
-    }
-    
-    @IBAction func searchBtnAction(_ sender: UIButton) {
-        searchView.isHidden.toggle()
     }
     
     private func getRestaurantsList() {
@@ -60,6 +56,13 @@ class HomeViewController: UIViewController {
                 hideLoader()
             }
         })
+    }
+}
+
+// MARK: IBACTION METHODS
+extension HomeViewController {
+    @IBAction func searchBtnAction(_ sender: UIButton) {
+        searchView.isHidden.toggle()
     }
 }
 
