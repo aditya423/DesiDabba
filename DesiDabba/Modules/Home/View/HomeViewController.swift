@@ -45,6 +45,7 @@ class HomeViewController: UIViewController {
     }
     
     private func getRestaurantsList() {
+        showLoader()
         viewModel.getRestaurantsList(completion: { [weak self] success, error in
             guard let self = self else { return }
             DispatchQueue.main.async {

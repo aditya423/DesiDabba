@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "padded.png",
+      "filename" : "desiDabbaLogo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "DesiDabbaLogo2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "DesiDabbaLogo3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

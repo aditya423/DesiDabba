@@ -14,7 +14,7 @@ enum FileNames: String {
 }
 
 enum ImageConstants: String {
-    case appLogo = "DesiDabbaLogo"
+    case appLogo = "desiDabbaLogo"
     case starFill = "star_check"
     case starEmpty = "star.fill"
     case restaurantTemp = "restaurantImage"
